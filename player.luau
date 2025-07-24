@@ -1,4 +1,3 @@
---这个我公开了，因为懒得去加密，而且没有必要加密
 print([[
 ██╗  ██╗██╗  ██╗  ██╗  ██╗██╗   ██╗██████╗ 
 ╚██╗██╔╝██║ ██╔╝  ██║  ██║██║   ██║██╔══██╗
@@ -79,7 +78,7 @@ local function AnimateWelcome()
     label.AnchorPoint = Vector2.new(0.5, 0.5)
     label.Position = UDim2.new(0.5, 0, 0.5, 0)
     label.Size = UDim2.new(0.8, 0, 0, 100)
-    label.Text = "XK Hub\n支持服务器: \n被遗弃 | Chain | 压力\n墨水游戏 | 战争大亨 | 黑暗欺骗\n官方QQ:915207093"
+    label.Text = "XK Hub\n支持服务器: \n被遗弃 | Chain | 压力\n墨水游戏 | 战争大亨 | 黑暗欺骗丨在森林中生存99天\n官方QQ:915207093"
     label.TextColor3 = Color3.new(1, 1, 1)
     label.BackgroundTransparency = 1
     label.TextTransparency = 1
@@ -135,6 +134,7 @@ local function LoadGameScript()
         [18687417158] = "Forsaken",
         [12411473842] = "pressure",
         [12552538292] = "pressure",
+        [126509999114328] = "99day",
         [102181577519757] = "Darkdeception",
         [4639625707] = "Wartycoon",
         [13977939077] = "Chain",
