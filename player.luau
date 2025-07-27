@@ -78,7 +78,7 @@ local function AnimateWelcome()
     label.AnchorPoint = Vector2.new(0.5, 0.5)
     label.Position = UDim2.new(0.5, 0, 0.5, 0)
     label.Size = UDim2.new(0.8, 0, 0, 100)
-    label.Text = "XK Hub\n支持服务器: \n被遗弃 | Chain | 压力\n墨水游戏 | 战争大亨 | 黑暗欺骗丨在森林中生存99天\n官方QQ:915207093"
+    label.Text = "XK Hub\n支持服务器: \n被遗弃 | Chain | 压力\n墨水游戏 | 战争大亨 | 黑暗欺骗丨在森林中生存99天丨Nico'Nextbots\n官方QQ:915207093"
     label.TextColor3 = Color3.new(1, 1, 1)
     label.BackgroundTransparency = 1
     label.TextTransparency = 1
@@ -137,12 +137,12 @@ local function LoadGameScript()
         [126509999114328] = "99day",
         [102181577519757] = "Darkdeception",
         [4639625707] = "Wartycoon",
-        [13977939077] = "Chain",
-        [125009265613167] = "InkGame"
+        [13977939077] = "Chain", 
+        [10118559731] = "Nico"
     }
 
     local scriptName = scripts[id] or "Universalfunction"
-    ShowMessage("加载中...\n"..scriptName, 3)
+    ShowMessage("加载中...\n"..scriptName, 3。)
 
     local success, err = pcall(function()
         loadstring(game:HttpGet("https://github.com/DevSloPo/Main/raw/main/" .. scriptName))()
