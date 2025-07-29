@@ -1,4 +1,3 @@
---这个我公开了，因为懒得去加密，而且没有必要加密
 print([[
 ██╗  ██╗██╗  ██╗  ██╗  ██╗██╗   ██╗██████╗ 
 ╚██╗██╔╝██║ ██╔╝  ██║  ██║██║   ██║██╔══██╗
@@ -55,7 +54,7 @@ local function ShowImage()
     local logo = Instance.new("ImageLabel", gui)
     logo.AnchorPoint = Vector2.new(0.5, 0.5)
     logo.Position = UDim2.new(0.5, 0, 0.5, 0)
-    logo.Size = UDim2.new(0, 200, 0, 200)
+    logo.Size = UDim2.new(0, 250, 0, 200)
     logo.BackgroundTransparency = 1
     logo.Image = "rbxassetid://97837015726495"
     logo.ImageTransparency = 1
@@ -75,17 +74,39 @@ local function AnimateWelcome()
     local gui = Instance.new("ScreenGui", Players.LocalPlayer:WaitForChild("PlayerGui"))
     gui.Name = "XKHubWelcome"
 
-    local label = Instance.new("TextLabel", gui)
-    label.AnchorPoint = Vector2.new(0.5, 0.5)
-    label.Position = UDim2.new(0.5, 0, 0.5, 0)
-    label.Size = UDim2.new(0.8, 0, 0, 100)
-    label.Text = "XK Hub\n支持服务器: \n被遗弃 | Chain | 压力\n墨水游戏 | 战争大亨 | 黑暗欺骗丨在森林生存99天丨Nico'NextBots\n官方QQ:915207093"
-    label.TextColor3 = Color3.new(1, 1, 1)
-    label.BackgroundTransparency = 1
-    label.TextTransparency = 1
-    label.TextWrapped = true
-    label.Font = Enum.Font.GothamSemibold
-    label.TextSize = 20
+local label = Instance.new("TextLabel", gui)
+label.AnchorPoint = Vector2.new(0.5, 0.5)
+label.Position = UDim2.new(0.5, 0, 0.5, 0)
+label.Size = UDim2.new(0.8, 0, 0, 100)
+label.Text = "XK Hub\n支持服务器: \n被遗弃 | Chain | 压力\n墨水游戏 | 战争大亨 | 黑暗欺骗丨在森林生存99天丨Nico'NextBots丨Ohio\n官方QQ:915207093"
+label.BackgroundTransparency = 1
+label.TextTransparency = 0  
+label.TextWrapped = true
+label.Font = Enum.Font.GothamSemibold
+label.TextSize = 20
+
+local rainbowColors = {
+    Color3.fromRGB(255, 0, 0),   
+    Color3.fromRGB(255, 165, 0),  
+    Color3.fromRGB(255, 255, 0),   
+    Color3.fromRGB(0, 255, 0),    
+    Color3.fromRGB(0, 0, 255),  
+    Color3.fromRGB(75, 0, 130),    
+    Color3.fromRGB(238, 130, 238)  
+}
+
+task.spawn(function()
+    while true do
+        for i = 1, #rainbowColors do
+            TweenService:Create(
+                label,
+                TweenInfo.new(0.5, Enum.EasingStyle.Linear),
+                { TextColor3 = rainbowColors[i] }
+            ):Play()
+            task.wait(0.5)
+        end
+    end
+end)
 
     TweenService:Create(BlurEffect, TweenInfo.new(1), {Size = 16}):Play()
     TweenService:Create(label, TweenInfo.new(1), {TextTransparency = 0}):Play()
@@ -116,7 +137,7 @@ local function ShowMessage(msg, duration)
     label.TextTransparency = 1
     label.TextWrapped = true
     label.Font = Enum.Font.RobotoCondensed
-    label.TextSize = 18
+    label.TextSize = 30
 
     TweenService:Create(label, TweenInfo.new(0.5), {TextTransparency = 0}):Play()
     task.wait(duration)
@@ -129,10 +150,11 @@ local function LoadGameScript()
     local id = game.PlaceId
     local job = game.JobId
     TweenService:Create(BlurEffect, TweenInfo.new(0.5), {Size = 24}):Play()
-    ShowMessage("服务器检测中...\nServer: "..job, 3)
+    ShowMessage("服务器检测中...\nServer: "..job, 1)
 
     local scripts = {
         [18687417158] = "Forsaken",
+        [915207093] = "Ohio",
         [12411473842] = "pressure",
         [12552538292] = "pressure",
         [126509999114328] = "99day",
@@ -143,7 +165,7 @@ local function LoadGameScript()
     }
 
     local scriptName = scripts[id] or "Universalfunction"
-    ShowMessage("加载中...\n"..scriptName, 3)
+    ShowMessage("加载:\n"..scriptName, 3)
 
     local success, err = pcall(function()
         loadstring(game:HttpGet("https://github.com/DevSloPo/Main/raw/main/" .. scriptName))()
