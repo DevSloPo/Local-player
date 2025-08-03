@@ -2,7 +2,7 @@
         local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
         local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
         Notification:Notify(
-        {Title = "支持服务器", Description = "被遗弃，在森林生存99天，Chain，战争大亨，黑暗欺骗，压力，Nico'NextBots， Ohio"},
+        {Title = "支持服务器", Description = "被遗弃，在森林生存99天，Chain，战争大亨，黑暗欺骗，压力，Nico'NextBots， Ohio，通用时间Aut"},
         {OutlineColor = Color3.fromRGB(255, 0, 0),Time = 15, Type = "image"},
         {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 0, 0)}
         )
