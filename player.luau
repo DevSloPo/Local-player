@@ -5,7 +5,7 @@
         {Title = "支持服务器", Description = "被遗弃，在森林生存99天，Chain，战争大亨，黑暗欺骗，压力，Nico'NextBots， Ohio"},
         {OutlineColor = Color3.fromRGB(255, 0, 0),Time = 15, Type = "image"},
         {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 0, 0)}
-)
+        )
         local sound = Instance.new("Sound", game:GetService("SoundService"))
         sound.SoundId = "rbxassetid://4590662766"
         sound.Volume = 10
@@ -44,6 +44,7 @@
         [102181577519757] = "Darkdeception",
         [4639625707]   = "Wartycoon",
         [13977939077]  = "Chain", 
+        [6846458508]  = "Aut",
         [10118559731]  = "Nico"
         }
         local scriptName = scripts[PlaceId] or "Universalfunction"
