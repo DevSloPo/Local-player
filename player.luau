@@ -2,7 +2,7 @@
         local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
         local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
         Notification:Notify(
-        {Title = "支持服务器", Description = "被遗弃，在森林生存99天，Chain，战争大亨，黑暗欺骗，压力，Nico'NextBots， Ohio，通用时间Aut"},
+        {Title = "支持服务器", Description = "被遗弃，在森林生存99天，Chain，战争大亨，黑暗欺骗，压力，Nico'NextBots， Ohio，通用时间Aut，outdoors"},
         {OutlineColor = Color3.fromRGB(255, 0, 0),Time = 15, Type = "image"},
         {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 0, 0)}
         )
@@ -45,6 +45,7 @@
         [4639625707]   = "Wartycoon",
         [13977939077]  = "Chain", 
         [6846458508]  = "Aut",
+        [6839171747]  = "OutDoors",
         [10118559731]  = "Nico"
         }
         local scriptName = scripts[PlaceId] or "Universalfunction"
