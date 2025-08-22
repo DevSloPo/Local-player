@@ -2,7 +2,7 @@
         local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
         local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
         Notification:Notify(
-        {Title = "支持服务器", Description = "被遗弃，在森林生存99天，Chain，战争大亨，黑暗欺骗，压力，Nico'NextBots， Ohio，通用时间Aut，outdoors"},
+        {Title = "支持服务器", Description = "被遗弃，在森林生存99天，Chain，战争大亨，黑暗欺骗，压力，Nico'NextBots， Ohio，通用时间Aut，outdoors，最强战场"},
         {OutlineColor = Color3.fromRGB(255, 0, 0),Time = 15, Type = "image"},
         {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 0, 0)}
         )
@@ -44,6 +44,7 @@
         [102181577519757] = "Darkdeception",
         [4639625707]   = "Wartycoon",
         [13977939077]  = "Chain", 
+        [10449761463]  = "Tsb",
         [6846458508]  = "Aut",
         [6839171747]  = "OutDoors",
         [10118559731]  = "Nico"
@@ -67,7 +68,8 @@
         Notification:Notify(
         {Title = "XK Hub警告", Description = "加载失败: "..tostring(err)},
         {OutlineColor = Color3.fromRGB(255, 0, 0), Time = 5, Type = "image"},
-        {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 0, 0)}
+        {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = C
+olor3.fromRGB(255, 0, 0)}
         )
         local sound = Instance.new("Sound", game:GetService("SoundService"))
         sound.SoundId = "rbxassetid://4590662766"
