@@ -12,7 +12,7 @@ Library.ShowCustomCursor = true
 Library.NotifySide = "Right"
 
 local Window = Library:CreateWindow({
-    Title = 'XK Hub V1.0',
+    Title = 'XK Hub 服务器选择',
     Footer = "作者:小玄奘",
     Icon = 97837015726495,
     Center = true,
@@ -138,6 +138,15 @@ A:AddButton({
     end,
     DoubleClick = false, 
 })  
+
+A:AddButton({
+    Text = "种植花园",
+    Func = function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/PlantingGarden')))()
+    Library:Unload()
+    end,
+    DoubleClick = false, 
+})
 
 T:AddButton({
     Text = "通用",
