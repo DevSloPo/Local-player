@@ -1,4 +1,4 @@
-loadstring(game:HttpGet(('https://github.com/DevSloPo/Local-player/raw/main/Server.luau')))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/DevSloPo/Local-player/refs/heads/main/DongHua')))()
 local repo = 'https://raw.githubusercontent.com/deividcomsono/Obsidian/main/'
 
 local Library = loadstring(game:HttpGet(repo .. 'Library.lua'))()
