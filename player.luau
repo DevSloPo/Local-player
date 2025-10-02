@@ -148,6 +148,15 @@ A:AddButton({
     DoubleClick = false, 
 })
 
+A:AddButton({
+    Text = "暴力区",
+    Func = function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/Violent')))()
+    Library:Unload()
+    end,
+    DoubleClick = false, 
+})
+
 T:AddButton({
     Text = "通用",
     Func = function()
