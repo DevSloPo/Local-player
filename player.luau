@@ -157,6 +157,15 @@ A:AddButton({
     DoubleClick = false, 
 })
 
+A:AddButton({
+    Text = "破坏者谜团2",
+    Func = function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/MM2')))()
+    Library:Unload()
+    end,
+    DoubleClick = false, 
+})
+
 T:AddButton({
     Text = "通用",
     Func = function()
