@@ -183,7 +183,8 @@ J:AddDropdown("ScriptSelector", {
         "植物VS大脑机器人",
         "破坏者谜团2",
         "DOORS",
-        "死铁轨" 
+        "死铁轨",
+        "Fisch"  
     },
     Default = 1,
     Multi = false,
@@ -215,7 +216,8 @@ J:AddButton({
                 ["植物VS大脑机器人"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/BrainRobot',
                 ["破坏者谜团2"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/MM2',
                 ["DOORS"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/DOORS',
-                ["死铁轨"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/DeadRail'
+                ["死铁轨"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/DeadRail',
+                ["Fisch"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/Fisch'  
             }
             
             local url = scriptUrls[_G.SelectedScript]
@@ -235,6 +237,52 @@ J:AddButton({
     end,
     DoubleClick = false,
     Tooltip = "执行选中的脚本"
+})
+
+J:AddButton({
+    Text = "复制加载代码",
+    Func = function()
+        if _G.SelectedScript then
+            local scriptUrls = {
+                ["压力"] = 'https://github.com/DevSloPo/Main/raw/main/pressure',
+                ["被遗弃"] = 'https://github.com/DevSloPo/Main/raw/main/Forsaken',
+                ["Chain"] = 'https://github.com/DevSloPo/Main/raw/main/Chain',
+                ["战争大亨"] = 'https://github.com/DevSloPo/Main/raw/main/Wartycoon',
+                ["黑暗欺骗"] = 'https://github.com/DevSloPo/Main/raw/main/Darkdeception',
+                ["在森林中生存99夜"] = 'https://github.com/DevSloPo/Main/raw/main/99day',
+                ["Aut通用时间"] = 'https://github.com/DevSloPo/Main/raw/main/Aut',
+                ["最强战场"] = 'https://github.com/DevSloPo/Main/raw/main/Tsb',
+                ["俄亥俄州"] = 'https://github.com/DevSloPo/Main/raw/main/Ohio',
+                ["Nico nextbots"] = 'https://github.com/DevSloPo/Main/raw/main/Nico',
+                ["死亡之死"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/Death%20of%20death',
+                ["种植花园"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/PlantingGarden',
+                ["暴力区"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/Violent',
+                ["植物VS大脑机器人"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/BrainRobot',
+                ["破坏者谜团2"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/MM2',
+                ["DOORS"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/DOORS',
+                ["死铁轨"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/DeadRail',
+                ["Fisch"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/Fisch'
+            }
+            
+            local url = scriptUrls[_G.SelectedScript]
+            if url then
+             
+                local loadCode = 'loadstring(game:HttpGet("' .. url .. '"))()'
+                if setclipboard then
+                    setclipboard(loadCode)
+                    XKHub:Notification("复制成功", "已复制 " .. _G.SelectedScript .. " 的加载代码", 3)
+                else
+                    XKHub:Notification("错误", "复制功能不可用", 3)
+                end
+            else
+                XKHub:Notification("错误", "未找到脚本URL: " .. _G.SelectedScript, 3)
+            end
+        else
+            XKHub:Notification("提示", "请先选择一个脚本", 3)
+        end
+    end,
+    DoubleClick = false,
+    Tooltip = "复制选中脚本的完整加载代码"
 })
 
 K:AddButton({
