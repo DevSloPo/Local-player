@@ -184,7 +184,8 @@ J:AddDropdown("ScriptSelector", {
         "破坏者谜团2",
         "DOORS",
         "死铁轨",
-        "Fisch"  
+        "Fisch",
+        "菜鸟必须死"
     },
     Default = 1,
     Multi = false,
@@ -217,7 +218,8 @@ J:AddButton({
                 ["破坏者谜团2"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/MM2',
                 ["DOORS"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/DOORS',
                 ["死铁轨"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/DeadRail',
-                ["Fisch"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/Fisch'  
+                ["Fisch"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/Fisch',
+                ["菜鸟必须死"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/NoobMostdie',
             }
             
             local url = scriptUrls[_G.SelectedScript]
