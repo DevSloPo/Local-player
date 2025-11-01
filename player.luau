@@ -14,7 +14,7 @@ Library.NotifySide = "Right"
 
 local Window = Library:CreateWindow({
     Title = '服务器选择     ',
-    Footer = "Roblox XK Hub 功能版 通用 V1.2版本",
+    Footer = "XK Hub",
     Icon = 130580192237985,
     Center = true,
     AutoShow = true,
@@ -156,7 +156,6 @@ NB:AddLabel('<font color="rgb(255,100,0)">🔥此脚本创立于2024年6月份�
 NB:AddLabel('<font color="rgb(100,255,100)">如果你想一起和我制作XK Hub😳</font>')
 NB:AddLabel('<font color="rgb(100,200,255)">我们很欢迎你来找我👍🏻</font>')
 NB:AddLabel('<font color="rgb(200,100,255)">或者帮助/支持我们Doors👁️</font>')
-
 J:AddDropdown("ScriptSelector", {
     Values = {
         "压力",
@@ -178,7 +177,8 @@ J:AddDropdown("ScriptSelector", {
         "死铁轨",
         "Fisch",
         "菜鸟必须死",
-        "恶魔学"
+        "恶魔学",
+        "Garden Tower Defense"
     },
     Default = 1,
     Multi = false,
@@ -213,7 +213,8 @@ J:AddButton({
                 ["死铁轨"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/DeadRail',
                 ["Fisch"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/Fisch',
                 ["菜鸟必须死"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/NoobMostdie',
-                ["恶魔学"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/Demonology'
+                ["恶魔学"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/Demonology',
+                ["Garden Tower Defense"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/GardenTowerDefense'
             }
             
             local url = scriptUrls[_G.SelectedScript]
@@ -259,7 +260,8 @@ J:AddButton({
                 ["死铁轨"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/DeadRail',
                 ["Fisch"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/Fisch',
                 ["菜鸟必须死"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/NoobMostdie',
-                ["恶魔学"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/Demonology'
+                ["恶魔学"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/Demonology',
+                ["Garden Tower Defense"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/GardenTowerDefense'
             }
             
             local url = scriptUrls[_G.SelectedScript]
@@ -358,6 +360,7 @@ FWQ:AddLabel('<font color="rgb(0,255,0)">死铁轨</font>')
 FWQ:AddLabel('<font color="rgb(0,255,0)">Fisch</font>')
 FWQ:AddLabel('<font color="rgb(0,255,0)">菜鸟必须死</font>')
 FWQ:AddLabel('<font color="rgb(0,255,0)">恶魔学</font>')
+FWQ:AddLabel('<font color="rgb(0,255,0)">Garden Tower Defense</font>')
 local MenuGroup = Tabs["UI Settings"]:AddLeftGroupbox("调试功能")
 
 MenuGroup:AddCheckbox("KeybindMenuOpen", {
