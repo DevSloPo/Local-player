@@ -25,17 +25,29 @@ local Window = Library:CreateWindow({
     MenuFadeTime = 0
 })
 local Tabs = {
-B = Window:AddTab("玩家", "user"),
-I = Window:AddTab("主要", "user"),
-["UI Settings"] = Window:AddTab("界面设置", "settings"),
+    B = Window:AddTab("玩家", "users"),
+    I = Window:AddTab("主要", "house"),
+    ["UI Settings"] = Window:AddTab("界面设置", "palette")
 }
 local J = Tabs.I:AddLeftGroupbox('选择执行服务器')
 
 local HomeGroup = Tabs.B:AddLeftGroupbox("欢迎")
 local TY = Tabs.I:AddLeftGroupbox('通用')
 local K = Tabs.I:AddLeftGroupbox('其他')
+local LOL = Tabs.I:AddRightGroupbox('聊天功能')
 local FWQ = Tabs.I:AddRightGroupbox('支持服务器')
 
+LOL:AddToggle('秒互动', {
+    Text = '显示聊天框',
+    Default = false,
+    Callback = function(state)
+     if state then
+    game.TextChatService.ChatWindowConfiguration.Enabled = true
+    else
+    game.TextChatService.ChatWindowConfiguration.Enabled = false    
+    end
+    end
+})
 local avatarImage = Instance.new("ImageLabel")
 avatarImage.Name = "AvatarThumbnail"
 avatarImage.Size = UDim2.new(0, 220, 0, 220)
@@ -178,7 +190,8 @@ J:AddDropdown("ScriptSelector", {
         "Fisch",
         "菜鸟必须死",
         "恶魔学",
-        "Garden Tower Defense"
+        "Garden Tower Defense",
+        "刀刃球"
     },
     Default = 1,
     Multi = false,
@@ -214,7 +227,8 @@ J:AddButton({
                 ["Fisch"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/Fisch',
                 ["菜鸟必须死"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/NoobMostdie',
                 ["恶魔学"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/Demonology',
-                ["Garden Tower Defense"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/GardenTowerDefense'
+                ["Garden Tower Defense"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/GardenTowerDefense',
+                ["刀刃球"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/Bladeball'
             }
             
             local url = scriptUrls[_G.SelectedScript]
@@ -261,7 +275,8 @@ J:AddButton({
                 ["Fisch"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/Fisch',
                 ["菜鸟必须死"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/NoobMostdie',
                 ["恶魔学"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/Demonology',
-                ["Garden Tower Defense"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/GardenTowerDefense'
+                ["Garden Tower Defense"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/GardenTowerDefense',
+                ["刀刃球"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/Bladeball'
             }
             
             local url = scriptUrls[_G.SelectedScript]
@@ -283,13 +298,25 @@ J:AddButton({
     DoubleClick = false,
     Tooltip = "复制选中脚本的完整加载代码"
 })
-
+TY:AddLabel('<font color="rgb(255,0,0)">子追版会被部分服务器踢出</font>')
 TY:AddButton({
-    Text = "通用",
+    Text = "子追版 通用",
     Func = function()
         local startTime = tick()
         XKHub:Notification("脚本加载", "正在加载通用脚本...", 3)
         loadstring(game:HttpGet('https://github.com/DevSloPo/Main/raw/main/UNT'))()
+        local endTime = tick()
+        local loadTime = string.format("%.2f", endTime - startTime)
+        XKHub:Notification("加载成功", "通用脚本加载完成！耗时: " .. loadTime .. "秒", 5)
+    end,
+    DoubleClick = false, 
+})
+TY:AddButton({
+    Text = "无子追版 通用",
+    Func = function()
+        local startTime = tick()
+        XKHub:Notification("脚本加载", "正在加载通用脚本...", 3)
+        loadstring(game:HttpGet('https://github.com/DevSloPo/Main/raw/main/Universalfunction2'))()
         local endTime = tick()
         local loadTime = string.format("%.2f", endTime - startTime)
         XKHub:Notification("加载成功", "通用脚本加载完成！耗时: " .. loadTime .. "秒", 5)
@@ -361,6 +388,7 @@ FWQ:AddLabel('<font color="rgb(0,255,0)">Fisch</font>')
 FWQ:AddLabel('<font color="rgb(0,255,0)">菜鸟必须死</font>')
 FWQ:AddLabel('<font color="rgb(0,255,0)">恶魔学</font>')
 FWQ:AddLabel('<font color="rgb(0,255,0)">Garden Tower Defense</font>')
+FWQ:AddLabel('<font color="rgb(0,255,0)">刀刃球</font>')
 local MenuGroup = Tabs["UI Settings"]:AddLeftGroupbox("调试功能")
 
 MenuGroup:AddCheckbox("KeybindMenuOpen", {
