@@ -192,7 +192,8 @@ J:AddDropdown("ScriptSelector", {
         "恶魔学",
         "Garden Tower Defense",
         "刀刃球",
-        "内脏与黑火药"
+        "内脏与黑火药",
+        "GoFishing"
     },
     Default = 1,
     Multi = false,
@@ -230,7 +231,8 @@ J:AddButton({
                 ["恶魔学"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/Demonology',
                 ["Garden Tower Defense"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/GardenTowerDefense',
                 ["刀刃球"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/Bladeball',
-                ["内脏与黑火药"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/G&B'
+                ["内脏与黑火药"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/G&B',
+                ["GoFishing"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/GoFishing'
             }
             
             local url = scriptUrls[_G.SelectedScript]
@@ -279,7 +281,8 @@ J:AddButton({
                 ["恶魔学"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/Demonology',
                 ["Garden Tower Defense"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/GardenTowerDefense',
                 ["刀刃球"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/Bladeball',
-                ["内脏与黑火药"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/G&B'
+                ["内脏与黑火药"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/G&B',
+                ["GoFishing"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/GoFishing'
             }
             
             local url = scriptUrls[_G.SelectedScript]
@@ -393,6 +396,7 @@ FWQ:AddLabel('<font color="rgb(0,255,0)">恶魔学</font>')
 FWQ:AddLabel('<font color="rgb(0,255,0)">Garden Tower Defense</font>')
 FWQ:AddLabel('<font color="rgb(0,255,0)">刀刃球</font>')
 FWQ:AddLabel('<font color="rgb(0,255,0)">内脏与黑火药</font>')
+FWQ:AddLabel('<font color="rgb(0,255,0)">去钓鱼GoFishing</font>')
 local MenuGroup = Tabs["UI Settings"]:AddLeftGroupbox("调试功能")
 
 MenuGroup:AddCheckbox("KeybindMenuOpen", {
