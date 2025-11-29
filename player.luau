@@ -400,6 +400,7 @@ FWQ:AddLabel('<font color="rgb(0,255,0)">Garden Tower Defense</font>')
 FWQ:AddLabel('<font color="rgb(0,255,0)">刀刃球</font>')
 FWQ:AddLabel('<font color="rgb(0,255,0)">内脏与黑火药</font>')
 FWQ:AddLabel('<font color="rgb(0,255,0)">去钓鱼GoFishing</font>')
+FWQ:AddLabel('<font color="rgb(0,255,0)">闪光_Flick</font>')
 local MenuGroup = Tabs["UI Settings"]:AddLeftGroupbox("调试功能")
 
 MenuGroup:AddCheckbox("KeybindMenuOpen", {
