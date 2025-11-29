@@ -193,7 +193,8 @@ J:AddDropdown("ScriptSelector", {
         "Garden Tower Defense",
         "刀刃球",
         "内脏与黑火药",
-        "GoFishing"
+        "GoFishing",
+        "闪光_Flick"  
     },
     Default = 1,
     Multi = false,
@@ -232,7 +233,8 @@ J:AddButton({
                 ["Garden Tower Defense"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/GardenTowerDefense',
                 ["刀刃球"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/Bladeball',
                 ["内脏与黑火药"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/G&B',
-                ["GoFishing"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/GoFishing'
+                ["GoFishing"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/GoFishing',
+                ["闪光_Flick"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/Flick' 
             }
             
             local url = scriptUrls[_G.SelectedScript]
@@ -282,7 +284,8 @@ J:AddButton({
                 ["Garden Tower Defense"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/GardenTowerDefense',
                 ["刀刃球"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/Bladeball',
                 ["内脏与黑火药"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/G&B',
-                ["GoFishing"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/GoFishing'
+                ["GoFishing"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/GoFishing',
+                ["闪光_Flick"] = 'https://raw.githubusercontent.com/DevSloPo/Main/refs/heads/main/Flick'  
             }
             
             local url = scriptUrls[_G.SelectedScript]
