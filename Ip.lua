@@ -1,4 +1,4 @@
-local repo = 'https://raw.githubusercontent.com/DevSloPo/obsidian_UI/main/'
+ local repo = 'https://raw.githubusercontent.com/DevSloPo/obsidian_UI/main/'
 local Library = loadstring(game:HttpGet(repo .. 'Library.lua'))()
 local ThemeManager = loadstring(game:HttpGet(repo .. 'addons/ThemeManager.lua'))()
 local SaveManager = loadstring(game:HttpGet(repo .. 'addons/SaveManager.lua'))()
@@ -48,6 +48,8 @@ local I = Tabs.B:AddLeftGroupbox("远程事件", "zap")
 local D = Tabs.B:AddRightGroupbox("部分功能", "sliders")
 local E = Tabs.B:AddRightGroupbox("其余", "more-horizontal")
 local F = Tabs.B:AddRightGroupbox("用户界面", "monitor")
+
+Tabs.D:UpdateWarningBox({Title = '<font color="rgb(0,255,0)">更新公告</font>', Text = '1.主页UI更换\n2.CHAIN全面翻新', IsNormal = true, Visible = true, LockSize = true})
 
 local P = Tabs.D:AddLeftGroupbox("主要开发者", "wrench")
 
