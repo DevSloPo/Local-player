@@ -81,7 +81,7 @@ local D = Tabs.B:AddRightGroupbox("部分功能", "sliders")
 local E = Tabs.B:AddRightGroupbox("其余", "more-horizontal")
 local F = Tabs.B:AddRightGroupbox("用户界面", "monitor")
 
-Tabs.D:UpdateWarningBox({Title = '<font color="rgb(0,255,0)">更新公告</font>', Text = '1.主页UI更换\n2.CHAIN全面翻新\n3.更新新版通用 全面与简版已废弃 子弹追踪已废弃.\n4.doors全面重置', IsNormal = true, Visible = true, LockSize = true})
+Tabs.D:UpdateWarningBox({Title = '<font color="rgb(0,255,0)">更新公告</font>', Text = '1.主页UI更换\n2.CHAIN全面翻新\n3.更新新版通用 全面与简版已废弃 子弹追踪已废弃', IsNormal = true, Visible = true, LockSize = true})
 
 local P = Tabs.D:AddLeftGroupbox("主要开发者", "wrench")
 
@@ -165,13 +165,13 @@ spawn(function()
 end)
 
 L:AddDivider()
-local MyButton = L:AddButton({Text = "QQ主群, Func = function() setclipboard("QQ群:915207093") end})
+local MyButton = L:AddButton({Text = "QQ群聊", Func = function() setclipboard("QQ主群:915207093") end})
 local MyButton2 = MyButton:AddButton({Text = "QQ二群", Func = function() setclipboard("685243242") end})
 
 local TabBoxA = Tabs.A:AddRightTabbox()
 local N = TabBoxA:AddTab("信息")
 local K = TabBoxA:AddTab("服务器状态")
-K:AddLabel('🟡监狱人生');  ('🟡Forsaken'); K:AddLabel('🟡死亡之死'); K:AddLabel('🟢CHAIN'); K:AddLabel('🟢DOORS'); K:AddLabel('🟡暴力区'); K:AddLabel('🟡压力'); K:AddLabel('🟡闪光'); K:AddLabel('🟡在森林中生存99夜'); K:AddLabel('🟡最坚强的战场'); K:AddLabel('🟡命运的毁灭'); K:AddLabel('🟡破坏者谜团2'); K:AddLabel('🟡菜鸟必须死'); K:AddLabel('🟡刀刃球');Label('🟡Criminality')
+K:AddLabel('🟡监狱人生'); K:AddLabel('🟡Forsaken'); K:AddLabel('🟡死亡之死'); K:AddLabel('🟢CHAIN'); K:AddLabel('🟢DOORS'); K:AddLabel('🟡暴力区'); K:AddLabel('🟡压力'); K:AddLabel('🟡闪光'); K:AddLabel('🟡在森林中生存99夜'); K:AddLabel('🟡最坚强的战场'); K:AddLabel('🟡命运的毁灭'); K:AddLabel('🟡破坏者谜团2'); K:AddLabel('🟡菜鸟必须死'); K:AddLabel('🟡刀刃球'); K:AddLabel('🟡Criminality')
 N:AddLabel('🟢正常运行'); N:AddLabel('🟡存在bug/预计更新'); N:AddLabel('🔴停止使用/维护中'); N:AddLabel('⚪停止更新')
 
 H:AddButton({Text = "InfiniteYield[旧版]", Func = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))() end})
